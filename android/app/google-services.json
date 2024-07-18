@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "484357899033",
+    "project_id": "savebucks-a5aab",
+    "storage_bucket": "savebucks-a5aab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484357899033:android:064b74619fa6af529dfb88",
+        "android_client_info": {
+          "package_name": "com.app.savebucks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484357899033-22kfava8g2dr8fi61sb4gk8m4pdj9is9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.savebucks",
+            "certificate_hash": "e12daabb78fd4868c21ff665bed5360e17615a31"
+          }
+        },
+        {
+          "client_id": "484357899033-50gvd4c9sshqkcdl462n5lqbflp48j9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.savebucks",
+            "certificate_hash": "f91a7c5568c7a428151f69c73a51b7fa330a87c9"
+          }
+        },
+        {
+          "client_id": "484357899033-ra1ufsi94o5ehu0hbe3obvsf6agrcgbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.savebucks",
+            "certificate_hash": "fcb5cc3eeef301041ef31a7e9cbb334c41a98024"
+          }
+        },
+        {
+          "client_id": "484357899033-0vvh7lem2lia40pv91s8r7b4dpji1tv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9XQqanYJF7fmS95tljQ2-wgEIWB5LfZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484357899033-0vvh7lem2lia40pv91s8r7b4dpji1tv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

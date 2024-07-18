@@ -5,25 +5,23 @@
  * @format
  */
 
-import React from 'react';
 import type {PropsWithChildren} from 'react';
+import React, {useEffect} from 'react';
 import {
+  Button,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+
+const GOOGLE_ID =
+  '484357899033-0vvh7lem2lia40pv91s8r7b4dpji1tv3.apps.googleusercontent.com';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -62,36 +60,23 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId: GOOGLE_ID,
+      offlineAccess: true,
+    });
+
+    return () => {};
+  }, []);
+
+  async function googleSingIn() {
+    const userInfo = await GoogleSignin.signIn();
+    console.log('🚀 ~ googleSingIn ~ userInfo:', userInfo);
+  }
+
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+      <Button onPress={googleSingIn} title="Google SingIn" />
     </SafeAreaView>
   );
 }
