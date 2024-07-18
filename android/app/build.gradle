@@ -77,7 +77,7 @@ android {
 
     namespace "com.boilerplate"
     defaultConfig {
-        applicationId "com.app.savebucks"
+        applicationId "com.boilerplate"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
