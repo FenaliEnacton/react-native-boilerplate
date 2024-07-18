@@ -1,7 +1,13 @@
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import React, {useEffect} from 'react';
 import {Button, Platform, SafeAreaView, useColorScheme} from 'react-native';
-import {AccessToken, LoginManager} from 'react-native-fbsdk-next';
+import {
+  AccessToken,
+  LoginButton,
+  LoginManager,
+  Settings,
+} from 'react-native-fbsdk-next';
+console.log('🚀 ~ AccessToken:', AccessToken);
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const GOOGLE_ID =
@@ -19,6 +25,7 @@ function App(): React.JSX.Element {
       webClientId: GOOGLE_ID,
       offlineAccess: true,
     });
+    Settings.setAppID('215691241180236');
     return () => {};
   }, []);
 
@@ -32,16 +39,21 @@ function App(): React.JSX.Element {
       // LoginManager.setLoginBehavior('web_only');
     }
 
-    LoginManager.logInWithPermissions(['public_profile', 'email'])
-      .then(result => {
+    LoginManager.logInWithPermissions(['public_profile']).then(
+      function (result: any) {
         if (result.isCancelled) {
+          console.log('Login cancelled');
         } else {
-          AccessToken.getCurrentAccessToken().then(data => {
-            console.log('🚀 ~ AccessToken.getCurrentAccessToken ~ data:', data);
-          });
+          console.log(
+            'Login success with permissions: ' +
+              result.grantedPermissions.toString(),
+          );
         }
-      })
-      .catch(e => console.log(e));
+      },
+      function (error) {
+        console.log('Login fail with error: ' + error);
+      },
+    );
   }
 
   return (

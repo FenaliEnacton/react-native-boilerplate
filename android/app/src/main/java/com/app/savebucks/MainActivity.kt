@@ -1,4 +1,4 @@
-package com.boilerplate
+package com.app.savebucks
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
