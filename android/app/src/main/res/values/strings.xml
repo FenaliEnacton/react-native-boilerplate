@@ -2,4 +2,7 @@
     <string name="app_name">BoilerPlate</string>
     <string name="facebook_app_id">215691241180236</string>
     <string name="facebook_client_token">6b0ef358c5904a5b4e2f0c81b8374587</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">u5fE-edSnFV1Rv1azFwHiy2vHonkkDZvY81AK</string>
+     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
 </resources>

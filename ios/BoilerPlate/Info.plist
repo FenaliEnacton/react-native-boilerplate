@@ -68,6 +68,8 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>CodePushDeploymentKey</key>
+	<string>5hIHeIch_6L1DmhHovkED1hQReTsDgTQLEcyN</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
