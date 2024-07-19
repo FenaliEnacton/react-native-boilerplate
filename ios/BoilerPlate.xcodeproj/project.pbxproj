@@ -17,6 +17,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		CA2296592C4919FF007A42EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA2296582C4919FF007A42EA /* GoogleService-Info.plist */; };
 		1FFDE56406DA43C0BBBCBC00 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00911A3FBE44B59B9BB3834 /* BootSplash.storyboard */; };
+		26E6E7B0D6B94FBDBBC1A09F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC005AE62384EC28928BCD0 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		E8D0D7EA14744A771AC731E5 /* libPods-BoilerPlate-BoilerPlateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BoilerPlate-BoilerPlateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F00911A3FBE44B59B9BB3834 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "BoilerPlate/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5DC005AE62384EC28928BCD0 /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "BoilerPlate/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				AEDA74FB8A5EC7748207D776 /* PrivacyInfo.xcprivacy */,
 				F00911A3FBE44B59B9BB3834 /* BootSplash.storyboard */,
+				5DC005AE62384EC28928BCD0 /* Colors.xcassets */,
 			);
 			name = BoilerPlate;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				0BDAC129E01C432A38C03294 /* PrivacyInfo.xcprivacy in Resources */,
 				1FFDE56406DA43C0BBBCBC00 /* BootSplash.storyboard in Resources */,
+				26E6E7B0D6B94FBDBBC1A09F /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

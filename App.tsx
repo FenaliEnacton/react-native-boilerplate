@@ -1,14 +1,21 @@
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import React, {useEffect} from 'react';
-import {Button, Platform, SafeAreaView, useColorScheme} from 'react-native';
+import {
+  Button,
+  Platform,
+  SafeAreaView,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
 import {
   AccessToken,
   LoginButton,
   LoginManager,
   Settings,
 } from 'react-native-fbsdk-next';
-console.log('🚀 ~ AccessToken:', AccessToken);
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import BootSplash from 'react-native-bootsplash';
 
 const GOOGLE_ID =
   '484357899033-0vvh7lem2lia40pv91s8r7b4dpji1tv3.apps.googleusercontent.com';
@@ -26,6 +33,7 @@ function App(): React.JSX.Element {
       offlineAccess: true,
     });
     Settings.setAppID('215691241180236');
+    BootSplash.hide({fade: true});
     return () => {};
   }, []);
 
@@ -60,6 +68,9 @@ function App(): React.JSX.Element {
     <SafeAreaView style={backgroundStyle}>
       <Button onPress={googleSingIn} title="Google SingIn" />
       <Button onPress={facebookLogin} title="Facebook SingIn" />
+      <View style={{backgroundColor: 'red'}}>
+        <Text>Hello</Text>
+      </View>
     </SafeAreaView>
   );
 }
