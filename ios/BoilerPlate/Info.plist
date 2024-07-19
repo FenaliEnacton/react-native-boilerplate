@@ -45,6 +45,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CodePushDeploymentKey</key>
+	<string>5hIHeIch_6L1DmhHovkED1hQReTsDgTQLEcyN</string>
 	<key>FacebookAppID</key>
 	<string>215691241180236</string>
 	<key>FacebookClientToken</key>
@@ -63,13 +65,11 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
-	<string>BootSplash</string>
+	<string>BootSplash.storyboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>arm64</string>
 	</array>
-	<key>CodePushDeploymentKey</key>
-	<string>5hIHeIch_6L1DmhHovkED1hQReTsDgTQLEcyN</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

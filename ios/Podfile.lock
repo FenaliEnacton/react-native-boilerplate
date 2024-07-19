@@ -1221,6 +1221,8 @@ PODS:
     - React-utils (= 0.74.3)
   - RNAppleAuthentication (2.3.0):
     - React-Core
+  - RNBootSplash (6.0.0):
+    - React-Core
   - RNGoogleSignin (12.2.1):
     - GoogleSignIn (~> 7.1)
     - React-Core
@@ -1286,6 +1288,7 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNAppleAuthentication (from `../node_modules/@invertase/react-native-apple-authentication`)"
+  - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNGoogleSignin (from `../node_modules/@react-native-google-signin/google-signin`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1418,6 +1421,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNAppleAuthentication:
     :path: "../node_modules/@invertase/react-native-apple-authentication"
+  RNBootSplash:
+    :path: "../node_modules/react-native-bootsplash"
   RNGoogleSignin:
     :path: "../node_modules/@react-native-google-signin/google-signin"
   Yoga:
@@ -1444,7 +1449,7 @@ SPEC CHECKSUMS:
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   OneSignalXCFramework: f06edd9b146c7ac5935136a117ce2a5fdd6420f6
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
-  RCTDeprecation: 9db9faca3e832ec057b106c5c74f95cd2535e510
+  RCTDeprecation: 4c7eeb42be0b2e95195563c49be08d0b839d22b4
   RCTRequired: d530a0f489699c8500e944fde963102c42dcd0c2
   RCTTypeSafety: b20878506b094fa3d9007d7b9e4be0faa3562499
   React: 2f9da0177233f60fa3462d83fcccde245759f81a
@@ -1492,6 +1497,7 @@ SPEC CHECKSUMS:
   React-utils: e429e41d4edaae8d0668ecdb9e2122d58c0eea6b
   ReactCommon: 4d15fcb03c1d4086b0d6817bf28032e9da874c75
   RNAppleAuthentication: e99eaf3c4c01ad8ecb6125dd6f0cfd98871685b5
+  RNBootSplash: 16564e5c1b48ba8d9dd0fd3d53538f111daf7369
   RNGoogleSignin: 08dc4ba7eac2096c7fecfe109f0950fa4683c803
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
@@ -1499,4 +1505,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 18914af4d0c099e4d0d3f13667949e436a93e96e
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
