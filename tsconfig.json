@@ -1,3 +1,18 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      // "@src/": ["src/"],
+      "@assets": ["Assets/"],
+      "@components/core": ["Components/Core/"],
+      "@components/generic": ["Components/Generic/"],
+      "@components/user": ["Components/User/"],
+      "@react-native-config": ["react-native-config/"],
+      "@app_redux": ["Redux/"],
+      // "@app_redux/Actions": ["Redux/Actions/"],
+      "@user_redux": ["Redux/user_redux/"],
+      "@translations": ["translations/"]
+    }
+  }
 }
