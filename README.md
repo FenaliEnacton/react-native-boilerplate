@@ -29,6 +29,7 @@
 10. add font in xcode : [ ] iOS
 11. copy native file permission : [ ] android
 12. DeepLInk : [ ] android [ ] iOS
+13. copy keystore : [ ] android
 
 ## code push
 
@@ -58,6 +59,10 @@
 ### Tips
 
 1. command to check pkg update is avaliable or not : npx npm-check-updates -u && npm i
+2. text is not as same as old
+   a. copy asset folder from root dir
+   b. copy react-native-config from root dir
+   c. apply command "npx react-native-asset"
 
 ### Errors and Solution
 
@@ -82,7 +87,7 @@
 
 solustion : change store file with this code
 
-1. add pkg :=> npm i redux --legacy-peer-deps
+1.  add pkg :=> npm i redux --legacy-peer-deps
 
 ```javascript
 // import reducers from '@reducers';
@@ -192,3 +197,11 @@ solustion : make sure you are using this pkg with same version name
         params.user_info?.email ? params.user_info?.email : '',
       );
    ```
+
+   9. vector icon is not visible :
+      add this line in app/build.gradle => apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+   10. if your app stuck in splash screen make sure you are hiding splash screen (splash screen must be RNBootsplash )
+
+   11. developer error in googlesignin
+       => make sure you are using right keystore for release and debug. Tip: if possible then use release keystore in debug and release both just make change in app/build.gradle
