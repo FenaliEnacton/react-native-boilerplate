@@ -26,6 +26,7 @@
    a.for android no native change needed
    b. for iOS follow this doc https://documentation.onesignal.com/docs/react-native-sdk-setup#2-ios-setup or in xcode jsut add sign in competiblity of push notification and background mode with remote notification
 9. copy root asset folder : [ ] android [ ] iOS
+   look for Tips->2
 10. add font in xcode : [ ] iOS
 11. copy native file permission : [ ] android
 12. DeepLInk : [ ] android [ ] iOS
@@ -175,8 +176,6 @@ solustion : make sure you are using this pkg with same version name
    //init code start (File: appnavigetor)
    OneSignal.initialize(Config.ONE_SIGNAL, {});
    OneSignal.Debug.setLogLevel(LogLevel.Verbose);
-
-   //END OneSignal Init Code
    OneSignal.Notifications.canRequestPermission().then(res => {
      if (res) {
        OneSignal.Notifications.requestPermission(true);
@@ -205,3 +204,29 @@ solustion : make sure you are using this pkg with same version name
 
    11. developer error in googlesignin
        => make sure you are using right keystore for release and debug. Tip: if possible then use release keystore in debug and release both just make change in app/build.gradle
+
+   12.
+
+   ```
+   > Could not resolve all task dependencies for configuration ':app:debugCompileClasspath'.
+   > Could not resolve project :react-native-camera.
+     Required by:
+         project :app
+      > The consumer was configured to find a library for use during compile-time, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug', attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '8.2.1', attribute 'org.jetbrains.kotlin.platform.type' with value 'androidJvm'. However we cannot choose between the following variants of project :react-native-camera:
+          - generalDebugApiElements
+          - mlkitDebugApiElements
+   ```
+
+   Solustion =>
+
+   ```gradle
+      insert the following lines in android/app/build.gradle
+
+      android {
+      ...
+      defaultConfig {
+         ...
+         missingDimensionStrategy 'react-native-camera', 'general' <-- insert this line
+      }
+      }
+   ```
