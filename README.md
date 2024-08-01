@@ -30,7 +30,11 @@
 10. add font in xcode : [ ] iOS
 11. copy native file permission : [ ] android
 12. DeepLInk : [ ] android [ ] iOS
+
+- for iOS add assosited domain and add link "applinks:coupon.ae"
+
 13. copy keystore : [ ] android
+14. upgrade version : [ ] android [ ] iOS
 
 ## code push
 
