@@ -35,6 +35,7 @@
 
 13. copy keystore : [ ] android
 14. upgrade version : [ ] android [ ] iOS
+15. look for metadata in manifest file : [ ] android
 
 ## code push
 
