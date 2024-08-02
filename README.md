@@ -5,6 +5,7 @@
 1. pkgname: [ ] android [ ] iOS
    a. command: npx react-native-rename "Coupon.AE" --iosBundleID "com.app.couponae" --androidBundleID "com.app.couponae"
    b. need to change google-services.json file
+   c. need to change google-service.plist
 2. icon: [ ] android [ ] iOS
    a. for android android studio -> file -> new -> image asset -> choose logo and create it
    b. for ios hed to site https://www.appicon.co/ and chose logo and generet for ios and ipad ,download zip file and unzip it, go to xCode , project-> find image and copy pest AppIcon.appiconset from downloaded zip in to image
