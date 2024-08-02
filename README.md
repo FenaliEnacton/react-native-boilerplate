@@ -36,6 +36,8 @@
 13. copy keystore : [ ] android
 14. upgrade version : [ ] android [ ] iOS
 15. look for metadata in manifest file : [ ] android
+16. copy pkg of project and install it
+17. add src of project
 
 ## code push
 
