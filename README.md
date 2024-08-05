@@ -238,3 +238,8 @@ solustion : make sure you are using this pkg with same version name
       }
       }
    ```
+
+   13. no firebase app '[Default]' has been created call firebase.initlizeapp()
+       Solustion => add this in appdeleget.hh
+       #import <Firebase.h>
+       [FIRApp configure];
