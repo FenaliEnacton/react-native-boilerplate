@@ -250,10 +250,33 @@ solustion : make sure you are using this pkg with same version name
        #import <Firebase.h>
        [FIRApp configure];
 
-   14.[!] The following Swift pods cannot yet be integrated as static libraries:
-   The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
-   => solution. add this in pod file
-   pod 'Firebase', :modular_headers => true
-   pod 'FirebaseCoreInternal', :modular_headers => true
-   pod 'GoogleUtilities', :modular_headers => true
-   pod 'FirebaseCore', :modular_headers => true
+   14. [!] The following Swift pods cannot yet be integrated as static libraries:
+       The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
+       => solution. add this in pod file
+       pod 'Firebase', :modular_headers => true
+       pod 'FirebaseCoreInternal', :modular_headers => true
+       pod 'GoogleUtilities', :modular_headers => true
+       pod 'FirebaseCore', :modular_headers => true
+
+   15. TypeError: \_reactNative.Linking.removeEventListener is not a function. (In '\_reactNative.Linking.removeEventListener('url', this.handle_deep_link_URL)', '\_reactNative.Linking.removeEventListener' is undefined)
+
+   => in app navigetor add this line in class
+   constructor(props) {
+   super(props);
+   this.changeEventListener = null;
+   }
+
+=> replace this line with new code
+
+- old code  
+   Linking.addEventListener('url', this.handle_deep_link_URL);
+- new code
+  this.changeEventListener = Linking.addEventListener(
+  'url',
+  this.handle_deep_link_URL,
+  );
+
+- old code
+  Linking.removeEventListener('url', this.handle_deep_link_URL);
+- new code
+  this.changeEventListener.remove();
