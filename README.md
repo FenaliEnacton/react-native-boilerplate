@@ -243,3 +243,11 @@ solustion : make sure you are using this pkg with same version name
        Solustion => add this in appdeleget.hh
        #import <Firebase.h>
        [FIRApp configure];
+
+   14.[!] The following Swift pods cannot yet be integrated as static libraries:
+   The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
+   => solution. add this in pod file
+   pod 'Firebase', :modular_headers => true
+   pod 'FirebaseCoreInternal', :modular_headers => true
+   pod 'GoogleUtilities', :modular_headers => true
+   pod 'FirebaseCore', :modular_headers => true
