@@ -55,6 +55,7 @@
 
 1.  "react-native-flipper"
 2.  "react-native-translucent-modal" => use react native model
+3.  "redux-flipper"
 
 # PKG List which must have old version
 
@@ -72,6 +73,11 @@
    a. copy asset folder from root dir
    b. copy react-native-config from root dir
    c. apply command "npx react-native-asset"
+3. for superback product add this line in
+   build.gradlew under ext add
+   =>playServicesLocationVersion = "21.0.1"
+   app/build.gradle
+   => implementation 'com.google.android.gms:play-services-location:21.0.1'
 
 ### Errors and Solution
 
