@@ -38,13 +38,20 @@
 14. upgrade version : [ ] android [ ] iOS
 15. look for metadata in manifest file : [ ] android
 16. copy pkg of project and install it
+
+- after install do once " npm i " for applying patch pkg
+
 17. add src of project
 
 ## code push
 
-### Android -
+### Android
 
-### iOS -
+-
+
+### iOS
+
+-
 
 # PKG List which need to change
 
