@@ -27,7 +27,7 @@
    a.for android no native change needed
    b. for iOS follow this doc https://documentation.onesignal.com/docs/react-native-sdk-setup#2-ios-setup or in xcode jsut add sign in competiblity of push notification and background mode with remote notification
 9. copy root asset folder : [ ] android [ ] iOS
-   look for Tips->2
+   look for Tips->2 "npx react-native-asset"
 10. add font in xcode : [ ] iOS
 11. copy native file permission : [ ] android
 12. DeepLInk : [ ] android [ ] iOS
