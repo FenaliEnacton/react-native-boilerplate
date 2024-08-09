@@ -307,3 +307,36 @@ solustion : make sure you are using this pkg with same version name
     // };
   }, []);
   ```
+
+## Superback Releted guid
+
+### tips
+
+- init setup
+  for superback product add this line in
+  build.gradlew under ext add
+  =>playServicesLocationVersion = "21.0.1"
+  app/build.gradle
+  => implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+### error
+
+16. app is creshing when we press back from cemear screen in superback product
+    => make sure you are writing useeffact in index file of myqr screen
+
+```javascript
+const subscribe = props.navigation.addListener('focus', () =>
+  setIsCameraActive(0),
+);
+const unsubscribe = props.navigation.addListener('blur', () =>
+  setIsCameraActive(1),
+);
+useEffect(() => {
+  subscribe();
+  unsubscribe();
+  // return {
+  //   subscribe,
+  //   unsubscribe,
+  // };
+}, []);
+```
