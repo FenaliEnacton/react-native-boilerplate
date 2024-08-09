@@ -287,3 +287,23 @@ solustion : make sure you are using this pkg with same version name
   Linking.removeEventListener('url', this.handle_deep_link_URL);
 - new code
   this.changeEventListener.remove();
+
+  16. app is creshing when we press back from cemear screen in superback product
+      => make sure you are writing useeffact in index file of myqr screen
+
+  ```javascript
+  const subscribe = props.navigation.addListener('focus', () =>
+    setIsCameraActive(0),
+  );
+  const unsubscribe = props.navigation.addListener('blur', () =>
+    setIsCameraActive(1),
+  );
+  useEffect(() => {
+    subscribe();
+    unsubscribe();
+    // return {
+    //   subscribe,
+    //   unsubscribe,
+    // };
+  }, []);
+  ```
